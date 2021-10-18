@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "m": "^1.6.0",
-    "men": "^2.2.1"
+    "men": "^2.2.1",
+    "parcel-plugin-handlebars": "^0.4.4"
   }
 }
