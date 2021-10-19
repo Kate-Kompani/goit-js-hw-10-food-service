@@ -1,13 +1,26 @@
+import menuCards from '../templates/menu.hbs'
 import menuCard from '../templates/menu.hbs'
-import data from '../menu.json'
+import dishes from '../menu.json'
 
-console.log(data);
-console.log(menuCard);
+//1 вариант когда один шаблон для 1й карточки 
+// console.log(dishes);
+// console.log(menuCards(dishes));
 
-const menu = document.querySelector('.js-menu');
-let menuCardTpl = menuCard(data);
+// const menu = document.querySelector('.js-menu');
+// let menuCardsTpl = createMenuCards(dishes);
 
-menu.insertAdjacentHTML('beforeend', menuCardTpl);
-// function createCards(data) {
-//     return data.map(menuCard).join('');
+// menu.insertAdjacentHTML('beforeend', menuCardsTpl);
+// function createMenuCards(dishes) {
+//     return dishes.map(menuCard).join('');
 // }
+
+//2 вариант +each сразу для всех карточек
+
+console.log(menuCards(dishes));
+const menu = document.querySelector('.js-menu');
+let menuCardsTpl = createMenuCards(dishes);
+
+menu.insertAdjacentHTML('beforeend', menuCardsTpl);
+function createMenuCards(dishes) {
+    return menuCards(dishes);
+}
